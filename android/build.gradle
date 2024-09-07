@@ -29,12 +29,13 @@ if (isNewArchitectureEnabled()) {
 }
 
 android {
-    compileSdkVersion safeExtGet('compileSdkVersion', 23)
-    buildToolsVersion safeExtGet('buildToolsVersion', "25.0.0")
+    namespace "com.github.wumke.RNExitApp"
+    compileSdkVersion safeExtGet('compileSdkVersion', 34)
+    buildToolsVersion safeExtGet('buildToolsVersion', "34.0.0")
 
     defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion',16)
-        targetSdkVersion safeExtGet('targetSdkVersion',22)
+        minSdkVersion safeExtGet('minSdkVersion',21)
+        targetSdkVersion safeExtGet('targetSdkVersion',34)
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
         ndk {
             abiFilters "armeabi-v7a", "x86"
